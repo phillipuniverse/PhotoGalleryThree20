@@ -7,8 +7,7 @@
 //
 
 #import "PhotoGalleryThree20AppDelegate.h"
-
-#import "PhotoGalleryThree20ViewController.h"
+#import "Home.h"
 
 @implementation PhotoGalleryThree20AppDelegate
 
@@ -20,12 +19,29 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    PhotoGalleryThree20ViewController *mainView = [[PhotoGalleryThree20ViewController alloc] init];
+    TTNavigator *navigator = [TTNavigator navigator];
+	navigator.window = self.window;
+	navigator.persistenceMode = TTNavigatorPersistenceModeNone;
+
+    TTURLMap *map = navigator.URLMap;
+    //Map all non-explicit URLs in a web browser
+    [map from:@"*" toViewController:[TTWebController class]];
+    [map from:@"tt://home" toViewController:[Home class]];
     
-    self.window.rootViewController = mainView;
+    
+    TTOpenURL(@"tt://home");
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+#pragma mark -
+#pragma mark UIApplicationDelegate
+- (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)URL {
+	TTDPRINT(@"Opening url: %@", [URL absoluteString]);
+	[[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:URL.absoluteString]];
+	return YES;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
