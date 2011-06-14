@@ -23,14 +23,14 @@
 		5718118713A7EF200092E350 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5718118913A7EF200092E350 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5718118B13A7EF200092E350 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5718118F13A7EF200092E350 /* PhotoGalleryThree20-Info.plist */ = {isa = PBXFileReference; path = "PhotoGalleryThree20-Info.plist"; sourceTree = "<group>"; };
+		5718118F13A7EF200092E350 /* PhotoGalleryThree20-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoGalleryThree20-Info.plist"; sourceTree = "<group>"; };
 		5718119113A7EF200092E350 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5718119313A7EF200092E350 /* PhotoGalleryThree20-Prefix.pch */ = {isa = PBXFileReference; path = "PhotoGalleryThree20-Prefix.pch"; sourceTree = "<group>"; };
+		5718119313A7EF200092E350 /* PhotoGalleryThree20-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoGalleryThree20-Prefix.pch"; sourceTree = "<group>"; };
 		5718119413A7EF200092E350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5718119613A7EF200092E350 /* PhotoGalleryThree20AppDelegate.h */ = {isa = PBXFileReference; path = PhotoGalleryThree20AppDelegate.h; sourceTree = "<group>"; };
+		5718119613A7EF200092E350 /* PhotoGalleryThree20AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryThree20AppDelegate.h; sourceTree = "<group>"; };
 		5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20AppDelegate.m; sourceTree = "<group>"; };
 		5718119A13A7EF200092E350 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */ = {isa = PBXFileReference; path = PhotoGalleryThree20ViewController.h; sourceTree = "<group>"; };
+		5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryThree20ViewController.h; sourceTree = "<group>"; };
 		5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20ViewController.m; sourceTree = "<group>"; };
 		571811A013A7EF200092E350 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PhotoGalleryThree20ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
