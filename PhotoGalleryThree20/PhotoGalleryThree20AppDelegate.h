@@ -16,6 +16,4 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet PhotoGalleryThree20ViewController *viewController;
-
 @end

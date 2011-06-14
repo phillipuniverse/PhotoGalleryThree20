@@ -15,13 +15,14 @@
 
 @synthesize window=_window;
 
-@synthesize viewController=_viewController;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    PhotoGalleryThree20ViewController *mainView = [[PhotoGalleryThree20ViewController alloc] init];
+    
+    self.window.rootViewController = mainView;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -68,7 +69,6 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
     [super dealloc];
 }
 
