@@ -24,6 +24,9 @@
 		5718119813A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */; };
 		5718119E13A7EF200092E350 /* PhotoGalleryThree20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */; };
 		57AB058613A801D70098EBCA /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AB058513A801D70098EBCA /* Home.m */; };
+		57E3F3BE13A8EA7200E25D3D /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F3BD13A8EA7200E25D3D /* GalleryViewController.m */; };
+		57E3F3C113A8EABB00E25D3D /* GalleryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F3C013A8EABB00E25D3D /* GalleryDataSource.m */; };
+		57E3F3C413A8EAD000E25D3D /* GalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F3C313A8EAD000E25D3D /* GalleryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +203,12 @@
 		5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20ViewController.m; sourceTree = "<group>"; };
 		57AB058413A801D70098EBCA /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		57AB058513A801D70098EBCA /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
+		57E3F3BC13A8EA7200E25D3D /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		57E3F3BD13A8EA7200E25D3D /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		57E3F3BF13A8EABB00E25D3D /* GalleryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryDataSource.h; sourceTree = "<group>"; };
+		57E3F3C013A8EABB00E25D3D /* GalleryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryDataSource.m; sourceTree = "<group>"; };
+		57E3F3C213A8EAD000E25D3D /* GalleryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryModel.h; sourceTree = "<group>"; };
+		57E3F3C313A8EAD000E25D3D /* GalleryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +341,12 @@
 				5718118E13A7EF200092E350 /* Supporting Files */,
 				57AB058413A801D70098EBCA /* Home.h */,
 				57AB058513A801D70098EBCA /* Home.m */,
+				57E3F3BC13A8EA7200E25D3D /* GalleryViewController.h */,
+				57E3F3BD13A8EA7200E25D3D /* GalleryViewController.m */,
+				57E3F3BF13A8EABB00E25D3D /* GalleryDataSource.h */,
+				57E3F3C013A8EABB00E25D3D /* GalleryDataSource.m */,
+				57E3F3C213A8EAD000E25D3D /* GalleryModel.h */,
+				57E3F3C313A8EAD000E25D3D /* GalleryModel.m */,
 			);
 			path = PhotoGalleryThree20;
 			sourceTree = "<group>";
@@ -549,6 +564,9 @@
 				5718119813A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m in Sources */,
 				5718119E13A7EF200092E350 /* PhotoGalleryThree20ViewController.m in Sources */,
 				57AB058613A801D70098EBCA /* Home.m in Sources */,
+				57E3F3BE13A8EA7200E25D3D /* GalleryViewController.m in Sources */,
+				57E3F3C113A8EABB00E25D3D /* GalleryDataSource.m in Sources */,
+				57E3F3C413A8EAD000E25D3D /* GalleryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

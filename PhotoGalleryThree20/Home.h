@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Home : UIViewController {
-    
+@interface Home : UIViewController <TTLauncherViewDelegate> {
+    TTLauncherView *_launcherView;
 }
 
 @end
