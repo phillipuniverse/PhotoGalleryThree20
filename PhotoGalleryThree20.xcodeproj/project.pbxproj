@@ -23,6 +23,10 @@
 		5718119513A7EF200092E350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119413A7EF200092E350 /* main.m */; };
 		5718119813A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */; };
 		5718119E13A7EF200092E350 /* PhotoGalleryThree20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */; };
+		576A708113A9E57400FED51F /* launcher-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 576A707F13A9E57400FED51F /* launcher-icon.jpg */; };
+		576A708213A9E57400FED51F /* launcher-icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 576A708013A9E57400FED51F /* launcher-icon@2x.jpg */; };
+		5777D43213A9BA5A00694D4E /* CustomPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777D43113A9BA5A00694D4E /* CustomPhotoSource.m */; };
+		5777D43513A9BBB700694D4E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777D43413A9BBB700694D4E /* GDataXMLNode.m */; };
 		57AB058613A801D70098EBCA /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AB058513A801D70098EBCA /* Home.m */; };
 		57E3F3BE13A8EA7200E25D3D /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F3BD13A8EA7200E25D3D /* GalleryViewController.m */; };
 		57E3F3C113A8EABB00E25D3D /* GalleryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F3C013A8EABB00E25D3D /* GalleryDataSource.m */; };
@@ -201,6 +205,12 @@
 		5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20AppDelegate.m; sourceTree = "<group>"; };
 		5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryThree20ViewController.h; sourceTree = "<group>"; };
 		5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20ViewController.m; sourceTree = "<group>"; };
+		576A707F13A9E57400FED51F /* launcher-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launcher-icon.jpg"; sourceTree = "<group>"; };
+		576A708013A9E57400FED51F /* launcher-icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launcher-icon@2x.jpg"; sourceTree = "<group>"; };
+		5777D43013A9BA5A00694D4E /* CustomPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPhotoSource.h; sourceTree = "<group>"; };
+		5777D43113A9BA5A00694D4E /* CustomPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPhotoSource.m; sourceTree = "<group>"; };
+		5777D43313A9BBB700694D4E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = PhotoGalleryThree20/GDataXMLNode.h; sourceTree = "<group>"; };
+		5777D43413A9BBB700694D4E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = PhotoGalleryThree20/GDataXMLNode.m; sourceTree = "<group>"; };
 		57AB058413A801D70098EBCA /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		57AB058513A801D70098EBCA /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		57E3F3BC13A8EA7200E25D3D /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
@@ -316,6 +326,8 @@
 		5718118613A7EF200092E350 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5777D43313A9BBB700694D4E /* GDataXMLNode.h */,
+				5777D43413A9BBB700694D4E /* GDataXMLNode.m */,
 				3201088596B4756681693700 /* Three20UICommon.xcodeproj */,
 				320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */,
 				320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */,
@@ -334,6 +346,9 @@
 		5718118D13A7EF200092E350 /* PhotoGalleryThree20 */ = {
 			isa = PBXGroup;
 			children = (
+				576A707C13A9E39700FED51F /* images */,
+				5777D43013A9BA5A00694D4E /* CustomPhotoSource.h */,
+				5777D43113A9BA5A00694D4E /* CustomPhotoSource.m */,
 				5718119613A7EF200092E350 /* PhotoGalleryThree20AppDelegate.h */,
 				5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */,
 				5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */,
@@ -361,6 +376,15 @@
 				5718119413A7EF200092E350 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		576A707C13A9E39700FED51F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				576A707F13A9E57400FED51F /* launcher-icon.jpg */,
+				576A708013A9E57400FED51F /* launcher-icon@2x.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +574,8 @@
 			files = (
 				320B6C86F11D9990244A9731 /* Three20.bundle in Resources */,
 				5718119213A7EF200092E350 /* InfoPlist.strings in Resources */,
+				576A708113A9E57400FED51F /* launcher-icon.jpg in Resources */,
+				576A708213A9E57400FED51F /* launcher-icon@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +593,8 @@
 				57E3F3BE13A8EA7200E25D3D /* GalleryViewController.m in Sources */,
 				57E3F3C113A8EABB00E25D3D /* GalleryDataSource.m in Sources */,
 				57E3F3C413A8EAD000E25D3D /* GalleryModel.m in Sources */,
+				5777D43213A9BA5A00694D4E /* CustomPhotoSource.m in Sources */,
+				5777D43513A9BBB700694D4E /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +702,17 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGalleryThree20/PhotoGalleryThree20-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					three20/Build/Products/three20,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "PhotoGalleryThree20/PhotoGalleryThree20-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -687,7 +725,17 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGalleryThree20/PhotoGalleryThree20-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					three20/Build/Products/three20,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "PhotoGalleryThree20/PhotoGalleryThree20-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

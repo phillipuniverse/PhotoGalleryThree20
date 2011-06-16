@@ -14,11 +14,15 @@
 #pragma mark UIViewController Additions
 //Default init override when opening with TTNavigator
 - (id)initWithNavigatorURL:(NSURL *)URL query:(NSDictionary *)query {
-    if ((self = [super init])) {
+    if ((self = [super initWithNavigatorURL:URL query:query])) {
         
     }
     
     return self;
+}
+
+- (void)dealloc {
+    [super dealloc];
 }
 
 #pragma mark -
@@ -32,11 +36,11 @@
     launcher.delegate = self;
     launcher.columnCount = 3;
     launcher.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects:
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://Icon.png" URL:@"tt://gallery/nature" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Animals" image:@"" URL:@"tt://gallery/animals" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"" URL:@"tt://gallery/sports" canDelete:NO] autorelease],
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/nature" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Animals" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/animals" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/sports" canDelete:NO] autorelease],
                                                 nil],
-                      [NSArray arrayWithObjects:[[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"" URL:@"tt://gallery/sports" canDelete:NO] autorelease], nil],
+                      [NSArray arrayWithObjects:[[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/sports" canDelete:NO] autorelease], nil],
                       nil];
     
     [self.view addSubview:launcher];
@@ -44,7 +48,6 @@
 
 - (void)viewDidLoad {
     self.title = @"Home";
-    //self.view.backgroundColor = [UIColor blackColor];
     
 }
 
