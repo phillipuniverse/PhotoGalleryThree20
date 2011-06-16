@@ -8,6 +8,7 @@
 
 #import "PhotoGalleryThree20AppDelegate.h"
 #import "Home.h"
+#import "GalleryViewController.h"
 
 @implementation PhotoGalleryThree20AppDelegate
 
@@ -27,7 +28,7 @@
     //Map all non-explicit URLs in a web browser
     [map from:@"*" toViewController:[TTWebController class]];
     [map from:@"tt://home" toViewController:[Home class]];
-    
+    [map from:@"tt://albums/(initWithCategory:)" toViewController:[GalleryViewController class]];
     
     TTOpenURL(@"tt://home");
     [self.window makeKeyAndVisible];

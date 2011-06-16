@@ -10,7 +10,9 @@
 
 
 @interface GalleryViewController : TTTableViewController {
-    
+    NSString *_category;
 }
+
+@property (nonatomic, copy) NSString *category;
 
 @end

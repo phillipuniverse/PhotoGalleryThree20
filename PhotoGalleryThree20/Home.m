@@ -36,11 +36,11 @@
     launcher.delegate = self;
     launcher.columnCount = 3;
     launcher.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects:
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/nature" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Animals" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/animals" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/sports" canDelete:NO] autorelease],
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/nature" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Animals" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/animals" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/sports" canDelete:NO] autorelease],
                                                 nil],
-                      [NSArray arrayWithObjects:[[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://gallery/sports" canDelete:NO] autorelease], nil],
+                      [NSArray arrayWithObjects:[[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/sports" canDelete:NO] autorelease], nil],
                       nil];
     
     [self.view addSubview:launcher];

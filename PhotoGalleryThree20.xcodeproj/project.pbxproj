@@ -22,7 +22,6 @@
 		5718119213A7EF200092E350 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5718119013A7EF200092E350 /* InfoPlist.strings */; };
 		5718119513A7EF200092E350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119413A7EF200092E350 /* main.m */; };
 		5718119813A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */; };
-		5718119E13A7EF200092E350 /* PhotoGalleryThree20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */; };
 		576A708113A9E57400FED51F /* launcher-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 576A707F13A9E57400FED51F /* launcher-icon.jpg */; };
 		576A708213A9E57400FED51F /* launcher-icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 576A708013A9E57400FED51F /* launcher-icon@2x.jpg */; };
 		5777D43213A9BA5A00694D4E /* CustomPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777D43113A9BA5A00694D4E /* CustomPhotoSource.m */; };
@@ -203,8 +202,6 @@
 		5718119413A7EF200092E350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5718119613A7EF200092E350 /* PhotoGalleryThree20AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryThree20AppDelegate.h; sourceTree = "<group>"; };
 		5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20AppDelegate.m; sourceTree = "<group>"; };
-		5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryThree20ViewController.h; sourceTree = "<group>"; };
-		5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryThree20ViewController.m; sourceTree = "<group>"; };
 		576A707F13A9E57400FED51F /* launcher-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launcher-icon.jpg"; sourceTree = "<group>"; };
 		576A708013A9E57400FED51F /* launcher-icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launcher-icon@2x.jpg"; sourceTree = "<group>"; };
 		5777D43013A9BA5A00694D4E /* CustomPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPhotoSource.h; sourceTree = "<group>"; };
@@ -351,8 +348,6 @@
 				5777D43113A9BA5A00694D4E /* CustomPhotoSource.m */,
 				5718119613A7EF200092E350 /* PhotoGalleryThree20AppDelegate.h */,
 				5718119713A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m */,
-				5718119C13A7EF200092E350 /* PhotoGalleryThree20ViewController.h */,
-				5718119D13A7EF200092E350 /* PhotoGalleryThree20ViewController.m */,
 				5718118E13A7EF200092E350 /* Supporting Files */,
 				57AB058413A801D70098EBCA /* Home.h */,
 				57AB058513A801D70098EBCA /* Home.m */,
@@ -588,7 +583,6 @@
 			files = (
 				5718119513A7EF200092E350 /* main.m in Sources */,
 				5718119813A7EF200092E350 /* PhotoGalleryThree20AppDelegate.m in Sources */,
-				5718119E13A7EF200092E350 /* PhotoGalleryThree20ViewController.m in Sources */,
 				57AB058613A801D70098EBCA /* Home.m in Sources */,
 				57E3F3BE13A8EA7200E25D3D /* GalleryViewController.m in Sources */,
 				57E3F3C113A8EABB00E25D3D /* GalleryDataSource.m in Sources */,

@@ -11,6 +11,16 @@
 
 @implementation GalleryViewController
 
+@synthesize category = _category;
+
+- (id)initWithCategory:(NSString *)category {
+    if ((self = [super init])) {
+        self.category = category;
+        TTDPRINT(@"Category is: %@", category);
+    }
+    
+    return self;
+}
 
 - (void)createModel {
     
