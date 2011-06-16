@@ -177,12 +177,14 @@
 		CGFloat largeHeight = [[[[large elementsForName:@"height"] objectAtIndex:0] stringValue] doubleValue];
 		NSString *largeURL = [[[large elementsForName:@"url"] objectAtIndex:0] stringValue];
 		TTDPRINT(@"large: %@", largeURL);
+        
+        //NSString *caption = [[[image elementsForName:@"caption"] objectAtIndex:0] stringValue];
 		
 		PhotoItem *item = [PhotoItem itemWithThumbImageURL:(NSString*)thumbURL 
 											mediumImageURL:(NSString*)mediumURL 
 											 largeImageURL:(NSString*)largeURL 
 												   caption:@"" 
-													  size:CGSizeMake(mediumWidth, mediumHeight)];
+													  size:CGSizeMake(largeWidth, largeHeight)];
 		
 		[_results addObject:item];
 	}

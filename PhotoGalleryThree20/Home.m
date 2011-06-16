@@ -7,7 +7,7 @@
 //
 
 #import "Home.h"
-
+#import "GalleryViewController.h"
 
 @implementation Home
 
@@ -36,11 +36,10 @@
     launcher.delegate = self;
     launcher.columnCount = 3;
     launcher.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects:
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/nature" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Animals" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/animals" canDelete:NO] autorelease], 
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/sports" canDelete:NO] autorelease],
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"nature" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"ATVs" image:@"bundle://launcher-icon.jpg" URL:@"atvs" canDelete:NO] autorelease], 
+                                                [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"sports" canDelete:NO] autorelease],
                                                 nil],
-                      [NSArray arrayWithObjects:[[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"tt://albums/sports" canDelete:NO] autorelease], nil],
                       nil];
     
     [self.view addSubview:launcher];
@@ -54,7 +53,9 @@
 #pragma mark -
 #pragma mark TTLauncherViewDelegate
 - (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item {
-    [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:item.URL] applyAnimated:YES]];
+    NSString *category = item.URL;
+    GalleryViewController *albums = [[GalleryViewController alloc] initWithCategory:category];
+    [self.navigationController pushViewController:albums animated:YES];
 }
 
 - (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher {
