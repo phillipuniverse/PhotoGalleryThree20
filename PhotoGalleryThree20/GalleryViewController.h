@@ -15,4 +15,6 @@
 
 @property (nonatomic, copy) NSString *category;
 
+- (id)initWithCategory:(NSString *)category;
+
 @end

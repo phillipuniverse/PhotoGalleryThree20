@@ -13,4 +13,6 @@
     
 }
 
+- (id)initWithCategory:(NSString *)category;
+
 @end

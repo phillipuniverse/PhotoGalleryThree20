@@ -7,8 +7,16 @@
 //
 
 #import "GalleryDataSource.h"
-
+#import "GalleryModel.h"
 
 @implementation GalleryDataSource
+
+- (id)initWithCategory:(NSString *)category {
+    if((self = [super init])) {
+        self.model = [[GalleryModel alloc] initWithCategory:category];
+    }
+         
+    return self;
+}
 
 @end

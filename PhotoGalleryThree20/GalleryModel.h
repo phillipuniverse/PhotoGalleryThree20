@@ -10,7 +10,11 @@
 
 
 @interface GalleryModel : TTURLRequestModel {
-    
+    NSMutableArray *_results;
+    NSString *_category;
 }
+
+@property (nonatomic, readonly) NSArray *results;
+@property (nonatomic, copy) NSString *category;
 
 @end

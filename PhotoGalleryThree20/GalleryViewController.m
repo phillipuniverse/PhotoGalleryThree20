@@ -7,7 +7,7 @@
 //
 
 #import "GalleryViewController.h"
-
+#import "GalleryDataSource.h"
 
 @implementation GalleryViewController
 
@@ -23,7 +23,7 @@
 }
 
 - (void)createModel {
-    
+    self.dataSource = [[[GalleryDataSource alloc] initWithCategory:_category] autorelease];
 }
 
 @end
