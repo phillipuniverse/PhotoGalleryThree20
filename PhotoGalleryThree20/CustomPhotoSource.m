@@ -1,88 +1,14 @@
+//
+//  CustomPhotoSource.m
+//  PhotoGalleryThree20
+//
+//  Created by Phillip Verheyden on 6/14/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
 #import "CustomPhotoSource.h"
+#import "PhotoItem.h"
 
-// -----------------------------------------------------------------------
-#pragma mark -
-#pragma mark PhotoItem
-@interface PhotoItem : NSObject <TTPhoto>
-{
-    NSString *caption;
-    NSString *thumbnailURL;
-    NSString *mediumURL;
-	NSString *largeURL;
-    id <TTPhotoSource> photoSource;
-    CGSize size;
-    NSInteger index;
-}
-@property (nonatomic, retain) NSString *thumbnailURL;
-@property (nonatomic, retain) NSString *mediumURL;
-@property (nonatomic, retain) NSString *largeURL;
-+ (id)itemWithThumbImageURL:(NSString*)thumbImageURL mediumImageURL:(NSString*)mediumImageURL largeImageURL:(NSString*)largeImageURL caption:(NSString*)caption size:(CGSize)size;
-@end
-
-@implementation PhotoItem
-
-@synthesize caption, photoSource, size, index; // properties declared in the TTPhoto protocol
-@synthesize thumbnailURL, mediumURL, largeURL; // PhotoItem's own properties
-
-+ (id)itemWithThumbImageURL:(NSString*)thumbImageURL mediumImageURL:(NSString*)mediumImageURL largeImageURL:(NSString*)largeImageURL caption:(NSString*)theCaption size:(CGSize)theSize;
-{
-    PhotoItem *item = [[[[self class] alloc] init] autorelease];
-    item.caption = theCaption;
-    item.thumbnailURL = thumbImageURL;
-	item.mediumURL = mediumImageURL;
-    item.largeURL = largeImageURL;
-	item.size = theSize;
-	
-	//TTDPRINT(@"Creating photo with image: %@, thumb: %@, caption: %@, size: (%f, %f)", theImageURL, theThumbImageURL, theCaption, theSize.width, theSize.height);
-	
-    return item;
-}
-
-// ----------------------------------------------------------
-#pragma mark TTPhoto protocol
-
-/**
- *	The logic behind this is:
- *		- No mediumURL set, use the largeURL. No largeURL, use the thumbnail
-		- No largeURL set, use the mediumURL. No mediumURL, use the thumbnail
- */
-- (NSString*)URLForVersion:(TTPhotoVersion)version
-{
-	switch (version) {
-		case TTPhotoVersionThumbnail:
-			TTDPRINT(@"Getting thumb URL: %@", thumbnailURL);
-			return (thumbnailURL) ? thumbnailURL : @"";
-			break;
-		case TTPhotoVersionMedium:
-			TTDPRINT(@"Getting medium URL: %@", mediumURL);
-			return (mediumURL) ? mediumURL : ((largeURL) ? largeURL : thumbnailURL);
-			break;
-		case TTPhotoVersionLarge:
-			TTDPRINT(@"Getting large URL: %@", largeURL);
-			//Fall through 
-			return (mediumURL) ? largeURL : ((mediumURL) ? mediumURL : thumbnailURL);
-			break;
-		//Other possible cases:
-			//TTPhotoVersionNone
-			//TTPhotoVersionSmall
-	}
-    
-	return largeURL;
-}
-
-- (void)dealloc
-{
-    TT_RELEASE_SAFELY(caption);
-	TT_RELEASE_SAFELY(thumbnailURL);
-	TT_RELEASE_SAFELY(mediumURL);
-	TT_RELEASE_SAFELY(largeURL);
-    [super dealloc];
-}
-
-@end
-
-#pragma mark -
-#pragma	mark CustomPhotoSource
 @implementation CustomPhotoSource
 
 @synthesize title = _title;
@@ -92,7 +18,8 @@
  *	I had it pass in an element name to specify where the photos element started and this is really just unique to XML
  */
 - (id)initWithURL:(NSString *)url elementName:(NSString *)elementName {
-	if(self = [super init]){
+    self = [super init];
+	if (self) {
 		_url = url;
 		_element = elementName;
 	}
@@ -104,11 +31,12 @@
  *	You would probably initialize with this method if you were going to do JSON parsing
  */
 - (id)initWithURL:(NSString *)url {
-	if(self = [super init]) {
+    self = [super init];
+	if (self) {
 		_url = url;
 		_element = nil;
 	}
-	   
+    
 	return self;
 }
 
@@ -117,7 +45,7 @@
  */
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more {
 	TTDPRINT(@"Starting the request");
-		
+    
 	TTDPRINT(@"Url is: %@", _url);
 	
 	/*
@@ -141,7 +69,7 @@
 /*
  *	Edit this method for parsing. For instance, you might use some different JSON parsing if you don't want to do XML
  */
-- (void) requestDidFinishLoad:(TTURLRequest *)request {
+- (void)requestDidFinishLoad:(TTURLRequest *)request {
 	
 	//NSString *responseBody = [[NSString	alloc] initWithData:data encoding:NSASCIIStringEncoding];
 	//TTDPRINT(@"Made it to the response! The response was: %@", responseBody);
@@ -177,14 +105,12 @@
 		CGFloat largeHeight = [[[[large elementsForName:@"height"] objectAtIndex:0] stringValue] doubleValue];
 		NSString *largeURL = [[[large elementsForName:@"url"] objectAtIndex:0] stringValue];
 		TTDPRINT(@"large: %@", largeURL);
-        
-        //NSString *caption = [[[image elementsForName:@"caption"] objectAtIndex:0] stringValue];
 		
 		PhotoItem *item = [PhotoItem itemWithThumbImageURL:(NSString*)thumbURL 
 											mediumImageURL:(NSString*)mediumURL 
 											 largeImageURL:(NSString*)largeURL 
 												   caption:@"" 
-													  size:CGSizeMake(largeWidth, largeHeight)];
+													  size:CGSizeMake(mediumWidth, mediumHeight)];
 		
 		[_results addObject:item];
 	}
@@ -202,22 +128,23 @@
 	[super dealloc];
 }
 
-- (NSArray *) results {
- return [[_results copy] autorelease];
+- (NSArray *)results {
+    return [[_results copy] autorelease];
 }
 
-- (NSInteger) numberOfPhotos {
+- (NSInteger)numberOfPhotos {
 	return [_results count];
 }
 
-- (NSInteger) maxPhotoIndex {
+- (NSInteger)maxPhotoIndex {
 	return [_results count] - 1;
 }
 
 - (id<TTPhoto>)photoAtIndex:(NSInteger)index {
-    if (index < 0 || index > [self maxPhotoIndex])
+    if (index < 0 || index > [self maxPhotoIndex]) {
         return nil;
-
+    }
+    
 	id<TTPhoto> photo = [_results objectAtIndex:index];
 	photo.index = index;
 	photo.photoSource = self;
