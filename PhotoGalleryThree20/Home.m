@@ -14,7 +14,8 @@
 #pragma mark UIViewController Additions
 //Default init override when opening with TTNavigator
 - (id)initWithNavigatorURL:(NSURL *)URL query:(NSDictionary *)query {
-    if ((self = [super initWithNavigatorURL:URL query:query])) {
+    self = [super initWithNavigatorURL:URL query:query];
+    if (self) {
         
     }
     
@@ -27,9 +28,8 @@
 
 #pragma mark -
 #pragma mark UIViewController
-- (void)loadView {
-    //Called in order to instantiate this viewcontroller's view
-    [super loadView];
+- (void)viewDidLoad {
+    self.title = @"Home";
     
     TTLauncherView *launcher = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
     launcher.backgroundColor = [UIColor blackColor];
@@ -40,13 +40,7 @@
                                                 [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"sports" canDelete:NO] autorelease],
                                                 nil],
                       nil];
-    
-    [self.view addSubview:launcher];
-}
 
-- (void)viewDidLoad {
-    self.title = @"Home";
-    
 }
 
 #pragma mark -

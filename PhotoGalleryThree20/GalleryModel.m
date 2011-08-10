@@ -15,7 +15,8 @@
 @synthesize category = _category;
 
 - (id)initWithCategory:(NSString *)category {
-    if((self = [super init])) {
+    self = [super init];
+    if (self) {
         _results = [[NSMutableArray alloc] init];
         self.category = category;
     }
@@ -41,8 +42,7 @@
 	request.cachePolicy = TTURLRequestCachePolicyNoCache;
 	id<TTURLResponse> response = [[[TTURLDataResponse alloc] init] autorelease];
 	request.response = response;
-	//request.httpMethod = @"GET";
-	
+    	
 	//send out the request to be processed by the response parser
 	[request send];
 }

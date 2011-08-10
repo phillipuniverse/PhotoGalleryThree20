@@ -24,7 +24,8 @@
 @implementation GalleryDataSource
 
 - (id)initWithCategory:(NSString *)category {
-    if((self = [super init])) {
+    self = [super init];
+    if (self) {
         self.model = [[GalleryModel alloc] initWithCategory:category];
     }
          

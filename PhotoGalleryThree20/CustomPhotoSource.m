@@ -40,6 +40,11 @@
 	return self;
 }
 
+- (void)dealloc {
+	[_results release];
+	[super dealloc];
+}
+
 /*
  *	Kick off the request, pulling from cache if possible. Parsing will be handled in the 
  */
@@ -81,7 +86,7 @@
 	NSArray *images = [doc.rootElement elementsForName:_element];
 	_results = [[NSMutableArray alloc] init];
 	
-	for(GDataXMLElement *image in images) {
+	for (GDataXMLElement *image in images) {
 		/*
 		 *	Note: I commented out the thumbWidth/Height and mediumWidth/Height because they're currently unused and
 		 *	it was generating a warning. The size that I pass in when creating the PhotoItem is the size 
@@ -121,11 +126,6 @@
 	
 	//IMPORTANT: if you don't call this method, then your model states will not update
 	[super requestDidFinishLoad:request];
-}
-
-- (void)dealloc {
-	[_results release];
-	[super dealloc];
 }
 
 - (NSArray *)results {
