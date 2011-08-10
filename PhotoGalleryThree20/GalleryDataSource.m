@@ -10,6 +10,17 @@
 #import "GalleryModel.h"
 #import "Album.h"
 
+
+@interface SelectionSubtitleItemCell : TTTableSubtitleItemCell
+@end
+@implementation SelectionSubtitleItemCell
+- (void)setObject:(id)object {
+    [super setObject:object];
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    self.selectionStyle = TTSTYLEVAR(tableSelectionStyle);
+}
+@end
+
 @implementation GalleryDataSource
 
 - (id)initWithCategory:(NSString *)category {
@@ -27,6 +38,15 @@
         item.userInfo = album;
         [self.items addObject:item];
     }
+}
+
+- (Class)tableView:(UITableView*)tableView cellClassForObject:(id)object {
+	if ([object isKindOfClass:[TTTableSubtitleItem class]]) {
+		return [SelectionSubtitleItemCell class];
+	}
+	else {
+		return [super tableView:tableView cellClassForObject:object];
+	}
 }
 
 @end

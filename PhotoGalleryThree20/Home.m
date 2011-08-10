@@ -36,7 +36,6 @@
     launcher.delegate = self;
     launcher.columnCount = 3;
     launcher.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects:
-                                                [[[TTLauncherItem alloc] initWithTitle:@"Nature" image:@"bundle://launcher-icon.jpg" URL:@"nature" canDelete:NO] autorelease], 
                                                 [[[TTLauncherItem alloc] initWithTitle:@"ATVs" image:@"bundle://launcher-icon.jpg" URL:@"atvs" canDelete:NO] autorelease], 
                                                 [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"sports" canDelete:NO] autorelease],
                                                 nil],
