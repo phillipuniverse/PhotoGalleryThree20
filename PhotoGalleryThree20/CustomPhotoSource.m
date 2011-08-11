@@ -115,7 +115,7 @@
 											mediumImageURL:(NSString*)mediumURL 
 											 largeImageURL:(NSString*)largeURL 
 												   caption:@"" 
-													  size:CGSizeMake(mediumWidth, mediumHeight)];
+													  size:CGSizeMake(largeWidth, largeHeight)];
 		
 		[_results addObject:item];
 	}

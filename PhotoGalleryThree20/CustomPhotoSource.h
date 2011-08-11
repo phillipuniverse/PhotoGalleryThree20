@@ -32,7 +32,7 @@
 
 @property (nonatomic, readonly) NSArray *results;
 
-@property (nonatomic, retain) NSString *url;
+@property (nonatomic, copy) NSString *url;
 
 /**
  * The title of this collection of photos.

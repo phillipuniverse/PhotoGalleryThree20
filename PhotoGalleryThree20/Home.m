@@ -40,7 +40,8 @@
                                                 [[[TTLauncherItem alloc] initWithTitle:@"Sports" image:@"bundle://launcher-icon.jpg" URL:@"sports" canDelete:NO] autorelease],
                                                 nil],
                       nil];
-
+    
+    [self.view addSubview:launcher];
 }
 
 #pragma mark -

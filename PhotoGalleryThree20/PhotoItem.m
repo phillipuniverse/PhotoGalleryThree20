@@ -48,7 +48,7 @@
 		case TTPhotoVersionLarge:
 			TTDPRINT(@"Getting large URL: %@", largeURL);
 			//Fall through 
-			return (mediumURL) ? largeURL : ((mediumURL) ? mediumURL : thumbnailURL);
+			return (largeURL) ? largeURL : ((mediumURL) ? mediumURL : thumbnailURL);
 			break;
         default:
             return thumbnailURL;
