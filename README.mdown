@@ -1,12 +1,12 @@
 Useful Links
 ============
 
-* [http://three20.info/article/2010-10-06-Adding-Three20-To-Your-Project][Add Three20 to your project]
-* [http://three20.info/article/2011-03-10-Xcode4-Support][Three20 with XCode 4]
-* [http://three20.info/article/2010-10-06-URL-Based-Navigation][Intro guide to URL Navigation]
-* [http://three20.info/article/2010-10-07-Debugging-With-Three20][Enabling Three20 Debug flags]
-* [http://groups.google.com/group/three20/web/ttmodel-at-a-glance][TTModel paradigm]
-* [https://github.com/klazuka/TTRemoteExamples][Advanced JSON remote parsing via Flickr and Yahoo photos
-* [http://www.raywenderlich.com/553/how-to-chose-the-best-xml-parser-for-your-iphone-project][Compare and constrasting Cocoa XML parsers]
-* [http://www.raywenderlich.com/725/how-to-read-and-write-xml-documents-with-gdataxml][GDataXML Guide]
-* [http://groups.google.com/group/three20/web/ttphotoviewcontroller-json-xml-examples][TTPhotoViewController example]
+* [Add Three20 to your project](http://three20.info/article/2010-10-06-Adding-Three20-To-Your-Project)
+* [Three20 with XCode 4](http://three20.info/article/2011-03-10-Xcode4-Support)
+* [Intro guide to URL Navigation](http://three20.info/article/2010-10-06-URL-Based-Navigation)
+* [Enabling Three20 Debug flags](http://three20.info/article/2010-10-07-Debugging-With-Three20)
+* [TTModel paradigm](http://groups.google.com/group/three20/web/ttmodel-at-a-glance)
+* [Advanced JSON remote parsing via Flickr and Yahoo photos](https://github.com/klazuka/TTRemoteExamples)
+* [Compare and constrasting Cocoa XML parsers](http://www.raywenderlich.com/553/how-to-chose-the-best-xml-parser-for-your-iphone-project)
+* [GDataXML Guide](http://www.raywenderlich.com/725/how-to-read-and-write-xml-documents-with-gdataxml)
+* [TTPhotoViewController example](http://groups.google.com/group/three20/web/ttphotoviewcontroller-json-xml-examples)
